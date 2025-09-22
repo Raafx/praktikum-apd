@@ -19,7 +19,7 @@ list_data[2] = list(list_data[2])
 list_data[3] = float(list_data[3])
 
 #Menampilkan tipe data masing-masing elemen dalam list  setelah diubah
-print("\nTipe data setelah diubah: ")
+print("Tipe data setelah diubah: ")
 print(list_data[0],":",type(list_data[0]))
 print(list_data[1],":",type(list_data[1]))
 print(list_data[2],":",type(list_data[2]))
