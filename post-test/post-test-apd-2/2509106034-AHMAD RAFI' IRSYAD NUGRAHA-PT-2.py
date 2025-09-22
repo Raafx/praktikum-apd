@@ -3,8 +3,10 @@ list_data = [173,70.5,"Rafi",True]
 
 #Menampilkan tipe data masing-masing elemen dalam list sebelum diubah
 print("Tipe data sebelum diubah: ")
-for i in list_data:
-    print(i,":",type(i))
+print(list_data[0],":",type(list_data[0]))
+print(list_data[1],":",type(list_data[1]))
+print(list_data[2],":",type(list_data[2]))
+print(list_data[3],":",type(list_data[3]))
 
 #Menampilkan jumlah data yang bertipe integer dan float sebelum diubah
 jumlah_int_dan_float = list_data[0]+list_data[1]
@@ -18,8 +20,11 @@ list_data[3] = float(list_data[3])
 
 #Menampilkan tipe data masing-masing elemen dalam list  setelah diubah
 print("\nTipe data setelah diubah: ")
-for i in list_data:
-    print(i,":",type(i))
+print(list_data[0],":",type(list_data[0]))
+print(list_data[1],":",type(list_data[1]))
+print(list_data[2],":",type(list_data[2]))
+print(list_data[3],":",type(list_data[3]))
+
 
 #Menampilkan jumlah data yang bertipe integer dan float sebelum diubah
 jumlah_int_dan_float = list_data[1]+list_data[3]
