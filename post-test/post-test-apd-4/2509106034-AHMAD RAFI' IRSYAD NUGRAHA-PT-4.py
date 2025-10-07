@@ -35,6 +35,7 @@ while percobaan < 5:
         sisi_A = int(input("Masukan sisi pertama: "))
         sisi_B = int(input("Masukan sisi kedua: "))
         sisi_C = int(input("Masukan sisi ketiga: "))
+
         #Menentukan jenis segitiga berdasarkan panjang masing-masing sisinya
         if sisi_A <= 0 or sisi_B <= 0 or sisi_C <= 0:
             hasil = "Sisi tidak boleh bernilai kurang dari sama dengan 0!"
@@ -44,15 +45,19 @@ while percobaan < 5:
             hasil = "Segitiga sama sisi"
         elif sisi_A == sisi_B != sisi_C or sisi_B == sisi_C != sisi_A or sisi_A == sisi_C != sisi_B:
             hasil = "Segitiga sama kaki"
-        elif sisi_A != sisi_B != sisi_C:
+        else:
             hasil = "Segitiga sembarang"
+
         #Menampilkan jenis segitiga
         print(hasil)
+
         #Menghitung luas segitiga apabila terdefinisi sebagai segitiga
         if hasil != "Bukan Segitiga" and hasil != "Sisi tidak boleh bernilai kurang dari sama dengan 0!":
-           s = 1/2*(sisi_A+sisi_B+sisi_C)
-           luas_segiitiga = (s*(s-sisi_A)*(s-sisi_B)*(s-sisi_C))**0.5
+           alas = int(input("Input alas: "))
+           tinggi = int(input("Input tinggi: ")) 
+           luas_segiitiga = 1/2*(alas*tinggi)
            print("Luas Segitiga:",luas_segiitiga)
+
         #Menanyakan user apakah ingin melanjutkan program
         isLanjut = input("Apakah anda ingin mengulang program? [ya/tidak]: ")
         if isLanjut == "ya":
@@ -73,7 +78,6 @@ while percobaan < 5:
 if percobaan == 5:
     print("Anda terlalu banyak mencoba, program akan berhenti secara otomatis")
         
-
 print("\n===============Program Selesai===============\n")
 
 
