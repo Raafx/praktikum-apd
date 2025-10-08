@@ -26,7 +26,7 @@ while percobaan < 5:
     #mengecek apakah username dan password yang diinput user sesuai dengan yang dinisiasi sebelumnya
     #jika sesuai, maka login dinyatakan berhasil, dan memasuki kode program post-test sebelumnya
     if username_input == username and password_input == password:
-        print("\n=====Login Berhasil!=====\n")
+        print("\n=====Selamat datang di Program Segitiga!=====\n")
 
         #mengubah status login menjadi True, agar tidak mengulang lagi di bagian login
         login_status = True
@@ -69,13 +69,14 @@ while percobaan < 5:
     #Jika jumlah percobaan mencapai 5, while loop akan berhenti
 
     else:
+        
         print("Username dan Password tidak sesuai, coba lagi!")
-        print("=============================================")
+        print("=============================================\n")
         percobaan+=1
    
 
 #menampilkan pesan jika user mencoba login sebanyak 5 kali
-if percobaan == 5:
+if percobaan >= 5:
     print("Anda terlalu banyak mencoba, program akan berhenti secara otomatis")
         
 print("\n===============Program Selesai===============\n")
