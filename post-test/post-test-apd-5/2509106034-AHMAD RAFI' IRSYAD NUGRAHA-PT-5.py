@@ -92,25 +92,24 @@ while True:
 
             elif pilih_menu == "2":
                 os.system("cls || clear") 
-                print("============================================================================================================")
+                print("================================================================================================================================")
                 if len(data_pelanggan) > 0:
-                    print(f"{"No.":<3} {"Nama pelanggan":<20} {"Jenis Perangkat":<20} {"Jenis Kerusakan":<20} {"Status Perbaikan":<20} {"Biaya Service":<20}")
+                    print(f"{"No.":<3} {"Nama pelanggan":<20} {"Jenis Perangkat":<20} {"Jenis Kerusakan":<40} {"Status Perbaikan":<20} {"Biaya Service":<20}")
 
                     for index,data in enumerate(data_pelanggan,1):
-                        print(f"{index:<3} {data[0]:<20} {data[1]:<20} {data[2]:<20} {data[3]:<20} {data[4]:<20}")
+                        print(f"{index:<3} {data[0]:<20} {data[1]:<20} {data[2]:<40} {data[3]:<20} {data[4]:<20}")
                 else:
                     print("\nBelum Ada data yang bisa ditampilkan, silahkan Buat Data servis terlebih dahulu")
-                print("\n")
-                print("============================================================================================================")
+                print("================================================================================================================================")
 
             elif pilih_menu == "3":
                 while True: 
                     os.system("cls || clear") 
                     if len(data_pelanggan) > 0:
-                        print(f"\n{"No.":<3} {"Nama pelanggan":<20} {"Jenis Perangkat":<20} {"Jenis Kerusakan":<20} {"Status Perbaikan":<20}    {"Biaya Service":<20}")
+                        print(f"\n{"No.":<3} {"Nama pelanggan":<20} {"Jenis Perangkat":<20} {"Jenis Kerusakan":<40} {"Status Perbaikan":<20}    {"Biaya Service":<20}")
                         for index,data in enumerate(data_pelanggan,1):
 
-                            print(f"{index:<3} {data[0]:<20} {data[1]:<20} {data[2]:<20} {data[3]:<20} {data[4]:<20}")
+                            print(f"{index:<3} {data[0]:<20} {data[1]:<20} {data[2]:<40} {data[3]:<20} {data[4]:<20}")
 
                         while True:
                             isNumber = True
@@ -202,10 +201,10 @@ while True:
                     os.system("cls || clear") 
                     if len(data_pelanggan) > 0:
 
-                        print(f"\n{"No.":<3} {"Nama pelanggan":<20} {"Jenis Perangkat":<20} {"Jenis Kerusakan":<20} {"Status Perbaikan":<20}    {"Biaya Service":<20}")
+                        print(f"\n{"No.":<3} {"Nama pelanggan":<20} {"Jenis Perangkat":<20} {"Jenis Kerusakan":<40} {"Status Perbaikan":<20}    {"Biaya Service":<20}")
                         for index,data in enumerate(data_pelanggan,1):
 
-                            print(f"{index:<3} {data[0]:<20} {data[1]:<20} {data[2]:<20} {data[3]:<20} {data[4]:<20}")
+                            print(f"{index:<3} {data[0]:<20} {data[1]:<20} {data[2]:<40} {data[3]:<20} {data[4]:<20}")
 
                         while True:
                             isNumber = True
@@ -263,12 +262,15 @@ while True:
             if pilih_menu == "1": 
                 os.system("cls || clear") 
                 print("\n=========Silahkan Buat Data Servis Anda=========\n")
+
                 nama_pelanggan = input("Masukan nama Anda: ")
                 jenis_perangkat = input("Masukan jenis Perangkat Anda: ")
                 keluhan = input("Masukan Keluhan Anda: ")
                 biaya_service = "Belum diinput Admin"
                 status_perbaikan = "Belum Diperbaiki"
+
                 data_pelanggan.append([nama_pelanggan,jenis_perangkat,keluhan,status_perbaikan,biaya_service])
+                
                 os.system("cls || clear")
                 print("\nData Anda Berhasil Ditambahkan!\n")
                     
@@ -280,10 +282,10 @@ while True:
                     for data in data_pelanggan:
                         if data[0] == nama_pelanggan:
                             print("Data Anda Ditemukan!")
-                            print("\n============================================================================================================")
-                            print(f"{"No.":<3} {"Nama pelanggan":<20} {"Jenis Perangkat":<20} {"Jenis Kerusakan":<20} {"Status Perbaikan":<20}    {"Biaya Service":<20}")
-                            print(f"{1}.  {data[0]:<20} {data[1]:<20} {data[2]:<20} {data[3]:<20} {data[4]:<20}")   
-                            print("============================================================================================================")
+                            print("\n================================================================================================================================")
+                            print(f"{"No.":<3} {"Nama pelanggan":<20} {"Jenis Perangkat":<20} {"Jenis Kerusakan":<40} {"Status Perbaikan":<20}    {"Biaya Service":<20}")
+                            print(f"{1}.  {data[0]:<20} {data[1]:<20} {data[2]:<40} {data[3]:<20} {data[4]:<20}")   
+                            print("================================================================================================================================")
                             data_ditemukan = True
                             break
                         else:
