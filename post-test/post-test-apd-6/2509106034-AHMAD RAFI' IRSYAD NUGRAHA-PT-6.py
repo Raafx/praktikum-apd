@@ -21,6 +21,7 @@ while True:
             username = input("Buat Username Anda: ")
             password = input("Buat Password Anda: ")
             list_akun_admin.update({username:password})
+            os.system("cls || clear")
             print("\n----------------REGISTRASI BERHASIL!----------------\n")
         else:
             login_status = False
@@ -31,6 +32,7 @@ while True:
 
                 for username_tersimpan,password_tersimpan in list_akun_admin.items():
                     if username == username_tersimpan and password == password_tersimpan:
+                        os.system("cls || clear")
                         print("\n--------------Login Berhasil!--------------\n")
                         login_status = True
                         break
@@ -38,9 +40,10 @@ while True:
                 if login_status:
                     break
                 else:
+                    os.system("cls || clear")
                     print("\n=====Username dan Password tidak sesuai, silahkan ulangi lagi=====")
                     continue
-        print("======================================================")
+        
         print("=========SISTEM SERVIS PERANGKAT ELEKTRONIK===========\n")
         print("Anda Login sebagai Admin, Silahkan pilih menu dibawah:")
 
@@ -57,12 +60,35 @@ while True:
                 while True: 
                     os.system("cls || clear") 
                     print("\n=========Silahkan Buat Data pelanggan baru=========\n")
-                    nama_pelanggan = input("Masukan nama pelanggan: ")
-                    jenis_perangkat = input("Masukan jenis Perangkat: ")
-                    keluhan = input("Masukan jenis kerusakan: ")
+                    while True:
+                        nama_pelanggan = input("Masukan nama pelanggan: ")
+                        if nama_pelanggan == "":
+                            print("Input tidak boleh kosong, silahkan coba lagi!\n")
+                            continue
+                        else:
+                            break
+                    while True:
+                        jenis_perangkat = input("Masukan jenis Perangkat: ")
+                        if jenis_perangkat == "":
+                            print("Input tidak boleh kosong, silahkan coba lagi!\n")
+                            continue
+                        else:
+                            break
+                    while True:
+                        keluhan = input("Masukan jenis kerusakan: ")
+                        if keluhan == "":
+                            print("Input tidak boleh kosong, silahkan coba lagi!\n")
+                            continue
+                        else:
+                            break
+                    
+                    
                     while True:
                         isNumber = True
                         biaya_service = input("Masukan biaya service: ")
+                        if biaya_service == "":
+                            print("Input tidak boleh kosong, silahkan coba lagi!\n")
+                            continue
                         for i in biaya_service:
                             if i == "0" or i == "1" or i == "2" or i == "3" or i == "4" or i == "5" or i == "6" or i == "7" or i == "8" or i  == "9":
                                 continue
@@ -93,8 +119,10 @@ while True:
 
                     ulangi = input("Apakah Anda ingin menambahkan data lagi? ketik Y jika iya: ")
                     if ulangi == "Y" or ulangi == "y":
+                        os.system("cls || clear")
                         continue
                     else: 
+                        os.system("cls || clear")
                         break
 
             elif pilih_menu == "2":
@@ -140,6 +168,7 @@ while True:
                                 continue
 
                         while True: 
+                            os.system("cls || clear")
                             print("\n=================================================")
                             print("Pilih jenis data servis yang ingin anda ubah: ")
                             print("=================================================")
@@ -151,25 +180,60 @@ while True:
                             print("=================================================")
                             pilih_data_baru = input("pilih data [1-5]: ")
                             if pilih_data_baru == "1":
-                                nama_pelanggan_baru = input("Masukan Nama pelanggan Baru: ")
+                                
+                                while True:
+                                    nama_pelanggan_baru = input("Masukan Nama pelanggan Baru: ")
+                                    if nama_pelanggan_baru == "":
+                                        print("Input tidak boleh kosong, silahkan coba lagi!\n")
+                                        continue
+                                    else:
+                                        break
                                 data_terpilih["nama pelanggan"] = nama_pelanggan_baru
                                 break
+
                             elif pilih_data_baru == "2":
-                                jenis_perangkat_baru = input("Masukan Jenis Perangkat Baru: ")
+
+                                
+                                while True:
+                                    jenis_perangkat_baru = input("Masukan Jenis Perangkat Baru: ")
+                                    if jenis_perangkat_baru == "":
+                                        print("Input tidak boleh kosong, silahkan coba lagi!\n")
+                                        continue
+                                    else:
+                                        break
                                 data_terpilih["jenis perangkat"] = jenis_perangkat_baru
                                 break
                             elif pilih_data_baru == "3":
-                                keluhan_baru = input("Masukan Jenis Kerusakan Baru: ")
+                                
+                                
+                                while True:
+                                    keluhan_baru = input("Masukan Jenis Kerusakan Baru: ")
+                                    if keluhan_baru == "":
+                                        print("Input tidak boleh kosong, silahkan coba lagi!\n")
+                                        continue
+                                    else:
+                                        break
                                 data_terpilih["jenis kerusakan"] = keluhan_baru
                                 break
                             elif pilih_data_baru == "4":
-                                status_perbaikan_baru = input("Masukan Status Perbaikan Baru: ")
+
+                                
+                                while True:
+                                    status_perbaikan_baru = input("Masukan Status Perbaikan Baru: ")
+                                    if status_perbaikan_baru == "":
+                                        print("Input tidak boleh kosong, silahkan coba lagi!\n")
+                                        continue
+                                    else:
+                                        break
                                 data_terpilih["status perbaikan"] = status_perbaikan_baru
                                 break
                             elif pilih_data_baru == "5":
                                 while True:
                                     isNumber = True
                                     biaya_service_baru = input("Masukan biaya service: ")
+                                    if biaya_service_baru == "":
+                                        print("Input tidak boleh kosong, silahkan coba lagi!\n")
+                                        continue
                                     for i in biaya_service_baru:
                                         if i == "0" or i == "1" or i == "2" or i == "3" or i == "4" or i == "5" or i == "6" or i == "7" or i    == "8" or i == "9":
                                             continue
@@ -187,13 +251,16 @@ while True:
                                 data_terpilih["biaya service"] = biaya_service_baru
                                 break
                             else:
+                                os.system("cls || clear")
                                 print("Pilihan tidak dikenali, silahkan ulangi lagi")
                                 continue
                         print("\n=====Data sukses Diubah!=====\n")  
                         ulangi = input("Apakah ada data yang ingin anda ubah lagi? ketik Y jika iya: ")
-                        if ulangi == "Y":
+                        if ulangi == "Y" or ulangi == "y":
+                            os.system("cls || clear")
                             continue
                         else: 
+                            os.system("cls || clear")
                             break  
 
                     else:
@@ -226,8 +293,10 @@ while True:
 
                         ulangi = input("Apakah ada data yang ingin anda hapus lagi? ketik Y jika iya: ")
                         if ulangi == "Y" or ulangi == "y":
+                            os.system("cls || clear")
                             continue
                         else: 
+                            os.system("cls || clear")
                             break 
                     else:
                         print("Belum ada data yang bisa dihapus, silahkan buat data servis terlebih dahulu")
@@ -257,10 +326,28 @@ while True:
             if pilih_menu == "1": 
                 os.system("cls || clear") 
                 print("\n=========Silahkan Buat Data Servis Anda=========\n")
+                while True:
+                    nama_pelanggan = input("Masukan nama Anda: ")
+                    if nama_pelanggan == "":
+                        print("Input tidak boleh kosong, silahkan coba lagi!\n")
+                        continue
+                    else:
+                        break
+                while True:
+                    jenis_perangkat = input("Masukan jenis Perangkat Anda: ")
+                    if nama_pelanggan == "":
+                        print("Input tidak boleh kosong, silahkan coba lagi!\n")
+                        continue
+                    else:
+                        break
+                while True:
+                    keluhan = input("Masukan Keluhan Anda: ")
+                    if nama_pelanggan == "":
+                        print("Input tidak boleh kosong, silahkan coba lagi!\n")
+                        continue
+                    else:
+                        break
 
-                nama_pelanggan = input("Masukan nama Anda: ")
-                jenis_perangkat = input("Masukan jenis Perangkat Anda: ")
-                keluhan = input("Masukan Keluhan Anda: ")
                 biaya_service = "Belum diinput Admin"
                 status_perbaikan = "Belum Diperbaiki"
 
