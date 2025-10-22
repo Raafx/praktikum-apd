@@ -2,6 +2,7 @@ import os
 os.system("cls || clear") 
 
 list_akun_admin = {}
+list_akun_user = {}
 data_pelanggan = {}
 
 while True:
@@ -312,7 +313,35 @@ while True:
 
     elif login_menu == "2":
         os.system("cls || clear") 
-        print("======================================================")
+
+        if len(list_akun_user) == 0:
+            print("Anda belum memiliki akun, silahkan register akun terlebih dahulu\n")
+            username = input("Buat Username Anda: ")
+            password = input("Buat Password Anda: ")
+            list_akun_user.update({username:password})
+            os.system("cls || clear")
+            print("\n----------------REGISTRASI BERHASIL!----------------\n")
+        else:
+            login_status = False
+            print("Silahkan login menggunakan akun Anda")
+            while True:
+                username = input("Masukan Username Anda: ")
+                password = input("Masukan Password Anda: ")
+
+                for username_tersimpan,password_tersimpan in list_akun_user.items():
+                    if username == username_tersimpan and password == password_tersimpan:
+                        os.system("cls || clear")
+                        print("\n--------------Login Berhasil!--------------\n")
+                        login_status = True
+                        break
+                
+                if login_status:
+                    break
+                else:
+                    os.system("cls || clear")
+                    print("\n=====Username dan Password tidak sesuai, silahkan ulangi lagi=====")
+                    continue
+
         print("=========SISTEM SERVIS PERANGKAT ELEKTRONIK===========\n")
         print("Anda Login sebagai User, Silahkan pilih menu dibawah:")
         while True:
