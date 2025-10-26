@@ -1,13 +1,13 @@
 import os
 
 
-def user_regist(list_akun_user):
+def user_regist():
     print("Anda belum memiliki akun, silahkan register akun terlebih dahulu\n")
     username = input("Buat Username Anda: ")
     password = input("Buat Password Anda: ")
-    list_akun_user.update({username:password})
     os.system("cls || clear")
     print("\n----------------REGISTRASI BERHASIL!----------------\n")
+    return {username:password}
     
 def user_login(list_akun_user):
     login_status = False

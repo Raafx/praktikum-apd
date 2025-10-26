@@ -75,7 +75,7 @@ if __name__ == "__main__":
         if pilih_login == "1":
             os.system("cls || clear")
             if len(list_akun_admin) == 0:
-                admin_regist(list_akun_admin)
+                list_akun_admin.update(admin_regist())
             else:
                 admin_login(list_akun_admin)
 

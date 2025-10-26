@@ -32,3 +32,17 @@ def user_menu():
     print("2. Tampilkan Data Servis Saya")
     print("3. Keluar")
     print("======================================================")
+    
+
+def update_menu():
+    os.system("cls || clear")
+    print("\n=================================================")
+    print("Pilih jenis data servis yang ingin anda ubah: ")
+    print("=================================================")
+    print("1. Nama Pelanggan")
+    print("2. Jenis Perangkat")
+    print("3. Jenis Kerusakan")
+    print("4. Status Perbaikan")
+    print("5. Biaya Service")
+    print("=================================================")
+

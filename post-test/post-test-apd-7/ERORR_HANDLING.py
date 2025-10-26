@@ -12,7 +12,7 @@ def input_handling(input_message):
 
         try:
             user_input = input(input_message)
-            if user_input == "":
+            if user_input == "" or user_input == " "*len(user_input):
                 raise ValueError("Input tidak boleh kosong, silahkan coba lagi!\n")
             else:
                 return user_input

@@ -1,12 +1,13 @@
 import os
 
-def admin_regist(list_akun_admin):
+def admin_regist():
     print("Anda belum memiliki akun Admin, silahkan register akun terlebih dahulu\n")
     username = input("Buat Username Anda: ")
     password = input("Buat Password Anda: ")
-    list_akun_admin.update({username:password})
+    {username:password}
     os.system("cls || clear")
     print("\n----------------REGISTRASI BERHASIL!----------------\n")
+    return {username:password}
     
 def admin_login(list_akun_admin):
     login_status = False
