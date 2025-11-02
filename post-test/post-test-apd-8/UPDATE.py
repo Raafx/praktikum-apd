@@ -20,8 +20,8 @@ def update_data(data_pelanggan):
                 continue
 
         while True:
-            update_menu()
-            pilih_data_baru = input("pilih data [1-5]: ")
+            
+            pilih_data_baru = update_menu()
             if pilih_data_baru == "1":         
                 nama_pelanggan_baru = input_handling("Masukan Nama pelanggan Baru: ")
                 data_terpilih["nama pelanggan"] = nama_pelanggan_baru

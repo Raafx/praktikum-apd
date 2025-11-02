@@ -48,10 +48,20 @@ def user_menu():
     print("Anda Login sebagai User, Silahkan pilih menu dibawah:")
     
     print("\n======================================================")
-    print("1. Buat Laporan Servis")
-    print("2. Tampilkan Data Servis Saya")
-    print("3. Keluar")
-    print("======================================================")
+    
+
+    pilih_menu = [inquirer.List(
+            "Menu",
+            message="Pilih Menu",
+            choices=[
+                    "1. Buat Laporan Servis",
+                    "2. Tampilkan Data Servis Saya",
+                    "3. Keluar"]
+            )
+        ]
+    menu_dipilih = inquirer.prompt(pilih_menu)
+    
+    return menu_dipilih["Menu"][0]
     
 
 def update_menu():
@@ -59,10 +69,18 @@ def update_menu():
     print("\n=================================================")
     print("Pilih jenis data servis yang ingin anda ubah: ")
     print("=================================================")
-    print("1. Nama Pelanggan")
-    print("2. Jenis Perangkat")
-    print("3. Jenis Kerusakan")
-    print("4. Status Perbaikan")
-    print("5. Biaya Service")
-    print("=================================================")
+    pilih_menu = [inquirer.List(
+            "Menu",
+            message="Pilih Menu",
+            choices=[
+                "1. Nama Pelanggan",
+                "2. Jenis Perangkat",
+                "3. Jenis Kerusakan",
+                "4. Status Perbaikan",
+                "5. Biaya Service",]
+            )
+        ]
+    menu_dipilih = inquirer.prompt(pilih_menu)
+    
+    return menu_dipilih["Menu"][0]
 

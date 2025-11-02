@@ -49,9 +49,9 @@ def crud_operation():
         
 def user_operation():
     while True:
-        user_menu()
+        
 
-        pilih_menu = input("Pilih menu [1-3]: ")
+        pilih_menu = user_menu()
         
         if pilih_menu == "1":
             user_create(data_pelanggan)

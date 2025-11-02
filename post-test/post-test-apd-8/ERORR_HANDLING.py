@@ -15,7 +15,7 @@ def input_handling(input_message):
             if user_input == "" or user_input == " "*len(user_input):
                 raise ValueError("Input tidak boleh kosong, silahkan coba lagi!\n")
             else:
-                return user_input
+                return user_input.strip().capitalize()
         except ValueError as e:
             print(e)
             continue
