@@ -88,7 +88,8 @@ if __name__ == "__main__":
             os.system("cls || clear") 
 
             if len(list_akun_user) == 0:
-                user_regist(list_akun_user)
+                print("Anda belum memiliki akun, silahkan register akun terlebih dahulu\n")
+                list_akun_user.update(user_regist())
 
             else:
                 user_login(list_akun_user)

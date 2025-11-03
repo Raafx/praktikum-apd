@@ -2,8 +2,8 @@ import os
 import inquirer
 
 
-def user_regist(list_akun_user):
-    print("Anda belum memiliki akun, silahkan register akun terlebih dahulu\n")
+def user_regist():
+    
     username = input("Buat Username Anda: ")
     password = input("Buat Password Anda: ")
     os.system("cls || clear")
